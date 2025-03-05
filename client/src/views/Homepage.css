@@ -1,0 +1,15 @@
+.home-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.page-container {
+  width: 65%;
+  height: 100vh;
+  margin-left: 35%;
+  overflow-y: auto;
+  padding-top: 5vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
