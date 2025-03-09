@@ -1,11 +1,18 @@
+// Constants
+import { HomepageSections } from "../views/Homepage";
+
 import "./Sidebar.css";
 
 export const Sidebar = () => {
   return (
-    <div className="sidebar-container text-end">
-      <h1 className="fw-bold mb-4">Matthew Leung</h1>
+    <div className="sidebar-container">
+      <h1 className="fw-bold mb-4 display-5">Matthew Leung</h1>
 
-      <p>About me</p>
+      {HomepageSections.map(({label, component: Component}, idx) => (
+        <div key={idx}>
+          {label}
+        </div>
+      ))}
     </div>
   );
 };
