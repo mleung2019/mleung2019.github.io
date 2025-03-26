@@ -2,12 +2,12 @@
   position: fixed;
   width: 50%;
   height: 100vh;
-  padding-top: 5vw;
+  padding-top: 10vh;
   padding-left: 12.5%;
 }
 
 .sidebar-option {
-  height: 10%;
+  height: 6vh;
   align-content: center;
   cursor: pointer;
   opacity: 0.75;
@@ -20,7 +20,6 @@
   font-size: 150%;
 }
 
-.sidebar-option:hover {
-  font-weight: bold;
-  font-size: 150%;
+.inactive-section:hover {
+  font-size: 125%;
 }

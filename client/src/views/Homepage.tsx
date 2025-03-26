@@ -16,7 +16,12 @@ export const Homepage = () => {
 
       <div className="page-container p-font">
         {HomepageSections.map(({ label: _, component: Component }, idx) => (
-          <div className="pt-5 mb-5" ref={refArr[idx]} key={idx}>
+          <div
+            className="pt-5 mb-5"
+            id={String(idx)}
+            ref={refArr[idx]}
+            key={idx}
+          >
             <Component />
           </div>
         ))}
@@ -37,8 +42,7 @@ export const AboutMe = () => {
       vel ex aliquet rhoncus. Cras et leo ac lectus congue finibus quis eget
       orci. I'm a computer engineer who is dedicated to... Lorem ipsum dolor sit
       amet, consectetur adipiscing elit. Donec molestie lectus nisl, vitae
-      porttitor metus faucibus et. Cras finibus porta lectus vitae egestas. Nunc
-      scelerisque turpis vel nulla tincidunt euismod. Praesent
+      porttitor metus faucib
     </div>
   );
 };
@@ -57,7 +61,24 @@ export const Projects = () => {
       engineer who is dedicated to... Lorem ipsum dolor sit amet, consectetur
       adipiscing elit. Donec molestie lectus nisl, vitae porttitor metus
       faucibus et. Cras finibus porta lectus vitae egestas. Nunc scelerisque
-      turpis vel nulla tincidunt euismod. Praesent
+      turpis vel nulla tincidunt euismod. Praesent sollicitudin imperdiet
+      dictum. Mauris sed odio vel ex aliquet rhoncus. Cras et leo ac lectus
+      congue finibus quis eget orci. I'm a computer engineer who is dedicated
+      to... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      molestie lectus nisl, vitae porttitor metus faucibus et. Cras finibus
+      porta lectus vitae egestas. Nunc scelerisque turpis vel nulla tincidunt
+      euismod. Praesent sollicitudin imperdiet dictum. Mauris sed odio vel ex
+      aliquet rhoncus. Cras et leo ac lectus congue finibus quis eget orci. I'm
+      a computer engineer who is dedicated to... Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Donec molestie lectus nisl, vitae porttitor
+      metus faucibus et. Cras finibus porta lectus vitae egestas. Nunc
+      scelerisque turpis vel nulla tincidunt euismod. Praesent sollicitudin
+      imperdiet dictum. Mauris sed odio vel ex aliquet rhoncus. Cras et leo ac
+      lectus congue finibus quis eget orci. I'm a computer engineer who is
+      dedicated to... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Donec molestie lectus nisl, vitae porttitor metus faucibus et. Cras
+      finibus porta lectus vitae egestas. Nunc scelerisque turpis vel nulla
+      tincidunt euismod. Praesent
     </div>
   );
 };
