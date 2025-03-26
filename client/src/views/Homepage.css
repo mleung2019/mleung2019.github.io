@@ -15,7 +15,7 @@
   background-position: center;
   z-index: -1;
   opacity: 0.15;
-  filter: blur(3px);
+  filter: blur(2px);
   mix-blend-mode: lighten;
 }
 
@@ -23,11 +23,14 @@
   width: 50%;
   height: 100vh;
   margin-left: 50%;
-  padding-top: 5vw;
   padding-left: 0vw;
   padding-right: 12vw;
 }
 
-.p-size {
-  font-size: 110%;
+.p-font {
+  font-size: 100%;
+}
+
+.spacer {
+  padding-bottom: 100svh;
 }

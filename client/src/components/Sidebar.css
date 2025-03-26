@@ -5,3 +5,22 @@
   padding-top: 5vw;
   padding-left: 12.5%;
 }
+
+.sidebar-option {
+  height: 10%;
+  align-content: center;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+
+.active-section {
+  font-weight: bold;
+  opacity: 1;
+  font-size: 150%;
+}
+
+.sidebar-option:hover {
+  font-weight: bold;
+  font-size: 150%;
+}
