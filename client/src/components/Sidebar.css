@@ -14,12 +14,12 @@
   transition: font-size 0.3s ease, font-weight 0.3s ease;
 }
 
+.sidebar-option:not(.active-section):hover {
+  font-size: 125%;
+}
+
 .active-section {
   font-weight: bold;
   opacity: 1;
   font-size: 150%;
-}
-
-.inactive-section:hover {
-  font-size: 125%;
 }

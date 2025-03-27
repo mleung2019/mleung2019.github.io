@@ -1,12 +1,20 @@
-import { useRef } from "react";
+import { useRef, RefObject } from "react";
 
 // Components
 import { Sidebar } from "../components/Sidebar";
 
 import "./Homepage.css";
 
+export type refArrType = {
+  options: RefObject<any>[];
+  sections: RefObject<any>[];
+};
+
 export const Homepage = () => {
-  const refArr = [useRef(null), useRef(null), useRef(null)];
+  const refArr: refArrType = {
+    options: [useRef(null), useRef(null), useRef(null)],
+    sections: [useRef(null), useRef(null), useRef(null)],
+  };
 
   return (
     <div className="home-container">
@@ -19,7 +27,7 @@ export const Homepage = () => {
           <div
             className="pt-5 mb-5"
             id={String(idx)}
-            ref={refArr[idx]}
+            ref={refArr.sections[idx]}
             key={idx}
           >
             <Component />

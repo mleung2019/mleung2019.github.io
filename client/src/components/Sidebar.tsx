@@ -1,83 +1,96 @@
-import { useState, useEffect, RefObject } from "react";
+import { useEffect, RefObject, useRef } from "react";
 
 // Constants
-import { HomepageSections } from "../views/Homepage";
+import { HomepageSections, refArrType } from "../views/Homepage";
 
 import "./Sidebar.css";
 
-export const Sidebar = (parentProps: { refArr: RefObject<any>[] }) => {
-  const [currentSectionNum, setCurrentSectionNum] = useState(0);
+export const Sidebar = (parentProps: { refArr: refArrType }) => {
+  const refArr = parentProps.refArr;
+  const currentSectionNum = useRef(0);
+
+  // Helper function used to remove/add active class
+  const toggleOptions = (newIdx: number) => {
+    if (newIdx < refArr.options.length) {
+      refArr.options[currentSectionNum.current].current.classList.remove(
+        "active-section"
+      );
+      currentSectionNum.current = newIdx;
+      refArr.options[currentSectionNum.current].current.classList.add(
+        "active-section"
+      );
+    }
+  };
 
   // Auto-select for scrolling
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px 0px 0px 0px",
-      threshold: 0.5,
-    };
-
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-      console.log(entries);
-      const sortedEntries = entries.sort(
-        (a, b) => a.intersectionRect.bottom - b.intersectionRect.bottom
-      );
-
-      const entry = sortedEntries[0];
-      const index = parentProps.refArr.findIndex(
+      // Sort entries to get the one closest to the top
+      const entry = entries.sort(
+        (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+      )[0];
+      // Match entry to ref using idx
+      const idx = refArr.sections.findIndex(
         (ref) => ref.current === entry.target
       );
+
+      // If entry is coming into view
       if (entry.isIntersecting) {
-        if (index !== -1) {
-          console.log(index);
-          setCurrentSectionNum(index);
+        if (idx !== -1) {
+          toggleOptions(idx);
         }
-      } else {
-        // -2 because zero indexed and we need to switch behavior on
-        // second-to-last element
-        if (index !== HomepageSections.length - 2)
-          setCurrentSectionNum(currentSectionNum + 1);
+      }
+      // If entry is coming out of view, switch to next entry
+      else {
+        if (idx === currentSectionNum.current) {
+          toggleOptions(currentSectionNum.current + 1);
+        }
       }
     };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.5,
+    });
 
-    parentProps.refArr.forEach((ref) => {
+    const sectionRefs = refArr.sections;
+
+    // Observe objects
+    sectionRefs.forEach((ref) => {
       if (ref.current) observer.observe(ref.current);
     });
 
+    // Unobserve objects
     return () => {
-      parentProps.refArr.forEach((ref) => {
+      sectionRefs.forEach((ref) => {
         if (ref.current) observer.unobserve(ref.current);
       });
     };
-  }, [parentProps.refArr]);
+  }, [refArr]);
 
+  // Sidebar options
   type SidebarOptionProps = {
     sectionNum: number;
     sectionLabel: string;
   };
 
-  // Sidebar options
   const SidebarOption = (props: SidebarOptionProps) => {
     const classNameStr = `sidebar-option ${
-      props.sectionNum === currentSectionNum
-        ? "active-section"
-        : "inactive-section"
+      props.sectionNum === currentSectionNum.current ? "active-section" : ""
     }`;
 
     const handleSidebarClick = () => {
-      parentProps.refArr[props.sectionNum].current.scrollIntoView({
+      refArr.sections[props.sectionNum].current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-      setCurrentSectionNum(props.sectionNum);
     };
 
     return (
-      <div className={classNameStr} onClick={handleSidebarClick}>
+      <div
+        className={classNameStr}
+        onClick={handleSidebarClick}
+        ref={refArr.options[props.sectionNum]}
+      >
         {props.sectionLabel}
       </div>
     );
