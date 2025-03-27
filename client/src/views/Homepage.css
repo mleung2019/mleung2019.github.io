@@ -27,6 +27,10 @@
   padding-right: 12vw;
 }
 
+.title-font {
+  font-size: 250%;
+}
+
 .p-font {
   font-size: 100%;
 }

@@ -1,4 +1,4 @@
-import { useEffect, RefObject, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 // Constants
 import { HomepageSections, refArrType } from "../views/Homepage";
@@ -65,7 +65,7 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
         if (ref.current) observer.unobserve(ref.current);
       });
     };
-  }, [refArr]);
+  }, [refArr, toggleOptions]);
 
   // Sidebar options
   type SidebarOptionProps = {
@@ -98,12 +98,19 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
 
   // The sidebar itself
   return (
-    <div className="sidebar-container">
-      <h1 className="fw-bold mb-4 display-5">Matthew Leung</h1>
-
+    <div className="sidebar-container pt-5">
+      <h1 className="fw-bold mb-4 title-font">Matthew Leung</h1>
       {HomepageSections.map(({ label }, idx) => (
         <SidebarOption sectionNum={idx} sectionLabel={label} key={idx} />
       ))}
+      <div className="socials-container">
+        <a href="https://github.com/mleung2019" target="_blank">
+          <img className="social-icon" src="github_icon.png" />
+        </a>
+        <a href="https://www.linkedin.com/in/matthew-k-leung" target="_blank">
+          <img className="social-icon" src="linkedin_icon.png" />
+        </a>
+      </div>
     </div>
   );
 };

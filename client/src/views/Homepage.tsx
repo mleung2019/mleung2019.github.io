@@ -105,7 +105,14 @@ export const Resume = () => {
       engineer who is dedicated to... Lorem ipsum dolor sit amet, consectetur
       adipiscing elit. Donec molestie lectus nisl, vitae porttitor metus
       faucibus et. Cras finibus porta lectus vitae egestas. Nunc scelerisque
-      turpis vel nulla tincidunt euismod. Praesent
+      turpis vel nulla tincidunt euismod. Praesent Cras finibus porta lectus
+      vitae egestas. Nunc scelerisque turpis vel nulla tincidunt euismod.
+      Praesent Donec sollicitudin imperdiet dictum. Mauris sed odio vel ex
+      aliquet rhoncus. Cras et leo ac lectus congue finibus quis eget orci. I'm
+      a computer engineer who is dedicated to... Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Donec molestie lectus nisl, vitae porttitor
+      metus faucibus et. Cras finibus porta lectus vitae egestas. Nunc
+      scelerisque turpis vel nulla tincidunt euismod. Praesent
     </div>
   );
 };

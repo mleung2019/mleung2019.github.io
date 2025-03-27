@@ -2,8 +2,9 @@
   position: fixed;
   width: 50%;
   height: 100vh;
-  padding-top: 10vh;
   padding-left: 12.5%;
+  padding-right: 12.5%;
+  text-align: end;
 }
 
 .sidebar-option {
@@ -22,4 +23,26 @@
   font-weight: bold;
   opacity: 1;
   font-size: 150%;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  position: absolute;
+  bottom: 25px;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  opacity: 1;
 }
