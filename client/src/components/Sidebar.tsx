@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 // Constants
 import { HomepageSections, refArrType } from "../views/Homepage";
@@ -10,17 +10,20 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
   const currentSectionNum = useRef(0);
 
   // Helper function used to remove/add active class
-  const toggleOptions = (newIdx: number) => {
-    if (newIdx < refArr.options.length) {
-      refArr.options[currentSectionNum.current].current.classList.remove(
-        "active-section"
-      );
-      currentSectionNum.current = newIdx;
-      refArr.options[currentSectionNum.current].current.classList.add(
-        "active-section"
-      );
-    }
-  };
+  const toggleOptions = useCallback(
+    (newIdx: number) => {
+      if (newIdx < refArr.options.length) {
+        refArr.options[currentSectionNum.current].current.classList.remove(
+          "active-section"
+        );
+        currentSectionNum.current = newIdx;
+        refArr.options[currentSectionNum.current].current.classList.add(
+          "active-section"
+        );
+      }
+    },
+    [refArr.options]
+  );
 
   // Auto-select for scrolling
   useEffect(() => {
@@ -98,17 +101,33 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
 
   // The sidebar itself
   return (
-    <div className="sidebar-container pt-5">
+    <div className="sidebar-container">
       <h1 className="fw-bold mb-4 title-font">Matthew Leung</h1>
       {HomepageSections.map(({ label }, idx) => (
         <SidebarOption sectionNum={idx} sectionLabel={label} key={idx} />
       ))}
       <div className="socials-container">
-        <a href="https://github.com/mleung2019" target="_blank">
-          <img className="social-icon" src="github_icon.png" />
+        <a
+          href="https://github.com/mleung2019"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="social-icon"
+            src="icons/github_icon.png"
+            alt="github"
+          />
         </a>
-        <a href="https://www.linkedin.com/in/matthew-k-leung" target="_blank">
-          <img className="social-icon" src="linkedin_icon.png" />
+        <a
+          href="https://www.linkedin.com/in/matthew-k-leung"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="social-icon"
+            src="icons/linkedin_icon.png"
+            alt="linkedin"
+          />
         </a>
       </div>
     </div>
