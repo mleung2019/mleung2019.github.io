@@ -1,10 +1,6 @@
 export const Carousel = (props: { srcMedia: string[] }) => {
   return (
-    <div
-      id="carouselExampleIndicators"
-      className="carousel slide"
-      data-bs-ride="carousel"
-    >
+    <div id="carouselExampleIndicators" className="pt-3 carousel slide">
       <div className="carousel-indicators">
         {props.srcMedia.map((_, idx) => (
           <button
@@ -14,12 +10,16 @@ export const Carousel = (props: { srcMedia: string[] }) => {
             className={idx === 0 ? "active" : ""}
             aria-current="true"
             aria-label={String(idx)}
+            key={idx}
           ></button>
         ))}
       </div>
       <div className="carousel-inner">
         {props.srcMedia.map((e, idx) => (
-          <div className={idx === 0 ? "carousel-item active" : "carousel-item"}>
+          <div
+            className={idx === 0 ? "carousel-item active" : "carousel-item"}
+            key={idx}
+          >
             <img src={e} className="d-block w-100" alt={String(idx)} />
           </div>
         ))}

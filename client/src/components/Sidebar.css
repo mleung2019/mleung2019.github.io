@@ -13,7 +13,17 @@
   align-content: center;
   cursor: pointer;
   opacity: 0.75;
-  transition: font-size 0.3s ease, font-weight 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.title-font {
+  font-size: 250%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.option-font {
+  font-size: 250%;
 }
 
 .sidebar-option:not(.active-section):hover {
@@ -22,8 +32,9 @@
 
 .active-section {
   font-weight: bold;
-  opacity: 1;
   font-size: 150%;
+  text-decoration: underline;
+  opacity: 1;
 }
 
 .socials-container {

@@ -8,6 +8,7 @@ import "./Sidebar.css";
 export const Sidebar = (parentProps: { refArr: refArrType }) => {
   const refArr = parentProps.refArr;
   const currentSectionNum = useRef(0);
+  const lastScrollY = useRef(0);
 
   // Helper function used to remove/add active class
   const toggleOptions = useCallback(
@@ -37,6 +38,10 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
         (ref) => ref.current === entry.target
       );
 
+      // Keep track of scroll direction
+      const isScrollingDown = window.scrollY > lastScrollY.current;
+      lastScrollY.current = window.scrollY;
+
       // If entry is coming into view
       if (entry.isIntersecting) {
         if (idx !== -1) {
@@ -44,9 +49,14 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
         }
       }
       // If entry is coming out of view, switch to next entry
+      // This depends on scroll direction
       else {
         if (idx === currentSectionNum.current) {
-          toggleOptions(currentSectionNum.current + 1);
+          if (isScrollingDown) {
+            toggleOptions(currentSectionNum.current + 1);
+          } else {
+            toggleOptions(currentSectionNum.current - 1);
+          }
         }
       }
     };
@@ -102,7 +112,7 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
   // The sidebar itself
   return (
     <div className="sidebar-container">
-      <h1 className="fw-bold mb-4 title-font">Matthew Leung</h1>
+      <p className="mb-4 title-font">Matthew Leung</p>
       {HomepageSections.map(({ label }, idx) => (
         <SidebarOption sectionNum={idx} sectionLabel={label} key={idx} />
       ))}
