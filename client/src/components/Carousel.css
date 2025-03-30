@@ -1,0 +1,7 @@
+.carousel-black {
+  filter: invert(1);
+}
+
+span .carousel {
+  opacity: 0;
+}

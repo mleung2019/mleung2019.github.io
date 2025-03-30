@@ -62,11 +62,47 @@ export const Projects = () => {
     <div>
       <div className="section-font">Procedural City Generator</div>
       <div className="subsection-font">Godot, C#, GLSL</div>
-      <div className="pt-5">
-        This project generates a procedural infinite city by harnessing the
-        power of Voronoi noise.
+      <Carousel
+        carId="pcg"
+        srcMedia={[
+          "pcg/pcg_1.png",
+          "pcg/pcg_2.png",
+          "pcg/pcg_3.png",
+          "pcg/pcg_4.mp4",
+        ]}
+        isLight={true}
+      />
+      <div className="pt-3">
+        This project enables users to generate procedurally infinite cities by
+        harnessing the power of Voronoi noise and fragment shaders. Different
+        seeds produce unique, expansive city layouts. The look and feel of a
+        city can be tweaked easily with dynamic, flexible city generation
+        variables. With a 24-hour day/night cycle, city skyscrapers shine in the
+        sun during the day and glow with florescent lights at night.
       </div>
-      <Carousel srcMedia={["pcg_1.png", "pcg_2.png"]} />
+
+      <div className="section-font mt-5 pt-5">Triton Workout Planner</div>
+      <div className="subsection-font">
+        React, Node.js, TypeScript, HTML/CSS
+      </div>
+      <Carousel
+        carId="twp"
+        srcMedia={[
+          "twp/twp_2.png",
+          "twp/twp_1.png",
+          "twp/twp_3.png",
+          "twp/twp_4.png",
+          "twp/twp_5.png",
+        ]}
+        isLight={false}
+      />
+      <div className="pt-3">
+        This project is a workout planner app designed to help college students
+        develop consistent workout habits. Customize your workout sessions by
+        choosing from a variety of exercise routines, set and keep track of your
+        personal goals, and even export your workout schedule to your Google
+        Calendar. Keep exercising every week to maintain your workout streak!
+      </div>
     </div>
   );
 };
@@ -74,25 +110,10 @@ export const Projects = () => {
 export const Resume = () => {
   return (
     <div>
-      Donec sollicitudin imperdiet dictum. Mauris sed odio vel ex aliquet
-      rhoncus. Cras et leo ac lectus congue finibus quis eget orci. I'm a
-      computer engineer who is dedicated to... Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. Donec molestie lectus nisl, vitae porttitor
-      metus faucibus et. Cras finibus porta lectus vitae egestas. Nunc
-      scelerisque turpis vel nulla tincidunt euismod. Praesent Donec
-      sollicitudin imperdiet dictum. Mauris sed odio vel ex aliquet rhoncus.
-      Cras et leo ac lectus congue finibus quis eget orci. I'm a computer
-      engineer who is dedicated to... Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit. Donec molestie lectus nisl, vitae porttitor metus
-      faucibus et. Cras finibus porta lectus vitae egestas. Nunc scelerisque
-      turpis vel nulla tincidunt euismod. Praesent Cras finibus porta lectus
-      vitae egestas. Nunc scelerisque turpis vel nulla tincidunt euismod.
-      Praesent Donec sollicitudin imperdiet dictum. Mauris sed odio vel ex
-      aliquet rhoncus. Cras et leo ac lectus congue finibus quis eget orci. I'm
-      a computer engineer who is dedicated to... Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. Donec molestie lectus nisl, vitae porttitor
-      metus faucibus et. Cras finibus porta lectus vitae egestas. Nunc
-      scelerisque turpis vel nulla tincidunt euismod. Praesent
+      <div>View my full resume here:</div>
+      <button type="button" className="mt-3 btn btn-primary" onClick={() => {}}>
+        Resume ⤴
+      </button>
     </div>
   );
 };
