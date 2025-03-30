@@ -15,16 +15,16 @@
   background-position: center;
   z-index: -1;
   opacity: 0.15;
-  filter: blur(5px);
+  filter: blur(10px);
   mix-blend-mode: lighten;
 }
 
 .page-container {
-  width: 50%;
+  width: 55%;
   height: 100vh;
-  margin-left: 50%;
-  padding-left: 0vw;
-  padding-right: 12vw;
+  margin-left: 45%;
+  padding-left: 2.5%;
+  padding-right: 11.25%;
   padding-top: 5vh;
 }
 
@@ -39,7 +39,21 @@
 
 .subsection-font {
   font-size: 110%;
+}
+
+.ssubsection-font {
+  font-size: 110%;
   opacity: 0.75;
+}
+
+.link-font {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+
+.link-font:hover {
+  color: violet;
 }
 
 .spacer {

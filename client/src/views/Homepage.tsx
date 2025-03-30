@@ -24,13 +24,18 @@ export const Homepage = () => {
       <Sidebar refArr={refArr} />
 
       <div className="page-container p-font">
-        {HomepageSections.map(({ label: _, component: Component }, idx) => (
+        {HomepageSections.map(({ label, component: Component }, idx) => (
           <div
             className="pt-5 mb-5"
             id={String(idx)}
             ref={refArr.sections[idx]}
             key={idx}
           >
+            {label === "Resume" ? (
+              <div className="section-font mb-3 link-font">Resume ⤴</div>
+            ) : (
+              <div className="section-font mb-3">{label}</div>
+            )}
             <Component />
           </div>
         ))}
@@ -60,8 +65,10 @@ export const AboutMe = () => {
 export const Projects = () => {
   return (
     <div>
-      <div className="section-font">Procedural City Generator</div>
-      <div className="subsection-font">Godot, C#, GLSL</div>
+      <div className="subsection-font link-font">
+        Procedural City Generator ⤴
+      </div>
+      <div className="ssubsection-font">Godot, C#, GLSL</div>
       <Carousel
         carId="pcg"
         srcMedia={[
@@ -81,8 +88,10 @@ export const Projects = () => {
         sun during the day and glow with florescent lights at night.
       </div>
 
-      <div className="section-font mt-5 pt-5">Triton Workout Planner</div>
-      <div className="subsection-font">
+      <div className="subsection-font mt-5 pt-5 link-font">
+        Triton Workout Planner ⤴
+      </div>
+      <div className="ssubsection-font">
         React, Node.js, TypeScript, HTML/CSS
       </div>
       <Carousel
@@ -103,19 +112,17 @@ export const Projects = () => {
         personal goals, and even export your workout schedule to your Google
         Calendar. Keep exercising every week to maintain your workout streak!
       </div>
+
+      <div className="subsection-font mt-5 pt-5 link-font">WatchList ⤴</div>
+      <div className="ssubsection-font">
+        React, Node.js, JavaScript, HTML/CSS
+      </div>
     </div>
   );
 };
 
 export const Resume = () => {
-  return (
-    <div>
-      <div>View my full resume here:</div>
-      <button type="button" className="mt-3 btn btn-primary" onClick={() => {}}>
-        Resume ⤴
-      </button>
-    </div>
-  );
+  return <div></div>;
 };
 
 export const HomepageSections = [

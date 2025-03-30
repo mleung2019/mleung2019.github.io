@@ -112,7 +112,7 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
   // The sidebar itself
   return (
     <div className="sidebar-container">
-      <p className="mb-4 title-font">Matthew Leung</p>
+      <p className="mb-4 title-font shadow-lg">Matthew Leung</p>
       {HomepageSections.map(({ label }, idx) => (
         <SidebarOption sectionNum={idx} sectionLabel={label} key={idx} />
       ))}
