@@ -33,11 +33,13 @@
 }
 
 .section-font {
+  color: white;
   font-weight: 500;
   font-size: 140%;
 }
 
 .subsection-font {
+  color: white;
   font-size: 110%;
 }
 

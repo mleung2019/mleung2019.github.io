@@ -32,7 +32,16 @@ export const Homepage = () => {
             key={idx}
           >
             {label === "Resume" ? (
-              <div className="section-font mb-3 link-font">Resume ⤴</div>
+              <div>
+                <a
+                  href="https://github.com/mleung2019/Procedural-City-Game"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="section-font mb-3 link-font"
+                >
+                  Resume ⤴
+                </a>
+              </div>
             ) : (
               <div className="section-font mb-3">{label}</div>
             )}
@@ -65,8 +74,15 @@ export const AboutMe = () => {
 export const Projects = () => {
   return (
     <div>
-      <div className="subsection-font link-font">
-        Procedural City Generator ⤴
+      <div>
+        <a
+          href="https://github.com/mleung2019/Procedural-City-Game"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="subsection-font link-font"
+        >
+          Procedural City Generator ⤴
+        </a>
       </div>
       <div className="ssubsection-font">Godot, C#, GLSL</div>
       <Carousel
@@ -80,16 +96,24 @@ export const Projects = () => {
         isLight={true}
       />
       <div className="pt-3">
-        This project enables users to generate procedurally infinite cities by
-        harnessing the power of Voronoi noise and fragment shaders. Different
-        seeds produce unique, expansive city layouts. The look and feel of a
-        city can be tweaked easily with dynamic, flexible city generation
-        variables. With a 24-hour day/night cycle, city skyscrapers shine in the
-        sun during the day and glow with florescent lights at night.
+        Procedural City Generator enables users to generate procedurally
+        infinite cities by harnessing the power of Voronoi noise and fragment
+        shaders. Different seeds produce unique, expansive city layouts. The
+        look and feel of a city can be tweaked easily with dynamic, flexible
+        city generation variables. With a 24-hour day/night cycle, city
+        skyscrapers shine in the sun during the day and glow with florescent
+        lights at night.
       </div>
 
-      <div className="subsection-font mt-5 pt-5 link-font">
-        Triton Workout Planner ⤴
+      <div className="mt-5 pt-5">
+        <a
+          href="https://github.com/Sid10july/TritonWorkoutPlanner"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="subsection-font link-font"
+        >
+          Triton Workout Planner ⤴
+        </a>
       </div>
       <div className="ssubsection-font">
         React, Node.js, TypeScript, HTML/CSS
@@ -106,16 +130,38 @@ export const Projects = () => {
         isLight={false}
       />
       <div className="pt-3">
-        This project is a workout planner app designed to help college students
-        develop consistent workout habits. Customize your workout sessions by
-        choosing from a variety of exercise routines, set and keep track of your
-        personal goals, and even export your workout schedule to your Google
-        Calendar. Keep exercising every week to maintain your workout streak!
+        Triton Workout Planner is a workout planner app designed to help college
+        students develop consistent workout habits. Customize your workout
+        sessions by choosing from a variety of exercise routines, set and keep
+        track of your personal goals, and even export your workout schedule to
+        your Google Calendar. Keep exercising every week to maintain your
+        workout streak!
       </div>
 
-      <div className="subsection-font mt-5 pt-5 link-font">WatchList ⤴</div>
+      <div className="mt-5 pt-5">
+        <a
+          href="https://github.com/watchlisthq/watchlist"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="subsection-font link-font"
+        >
+          WatchList ⤴
+        </a>
+      </div>
       <div className="ssubsection-font">
         React, Node.js, JavaScript, HTML/CSS
+      </div>
+      <Carousel
+        carId="wl"
+        srcMedia={["wl/wl_2.png", "wl/wl_1.png"]}
+        isLight={true}
+      />
+      <div className="pt-3">
+        WatchList is a webapp that allows film enthusiasts to curate a list of
+        shows and movies they plan to watch. Supporting 25 different streaming
+        services across 50+ countries, it's easy to find just what you're
+        looking for. Receive personalized recommendations based on your list to
+        discover new favorites effortlessly.
       </div>
     </div>
   );
