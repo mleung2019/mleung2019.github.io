@@ -15,8 +15,8 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
     (newIdx: number) => {
       if (
         newIdx < refArr.options.length &&
-        currentSectionNum.current != -1 &&
-        newIdx != -1
+        currentSectionNum.current !== -1 &&
+        newIdx !== -1
       ) {
         refArr.options[currentSectionNum.current].current.classList.remove(
           "active-section"
