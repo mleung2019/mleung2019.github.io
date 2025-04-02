@@ -32,13 +32,9 @@ export const Carousel = (props: {
             key={idx}
           >
             {e.endsWith(".mp4") ? (
-              <video
-                src={e}
-                className="d-block w-100"
-                autoPlay
-                loop
-                muted
-              ></video>
+              <video className="d-block w-100" autoPlay loop muted>
+                <source src={e} type="video/mp4"></source>
+              </video>
             ) : (
               <img src={e} className="d-block w-100" alt={String(idx)} />
             )}
