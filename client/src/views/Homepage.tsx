@@ -34,7 +34,7 @@ export const Homepage = () => {
             {label === "Resume" ? (
               <div>
                 <a
-                  href="https://github.com/mleung2019/Procedural-City-Game"
+                  href="https://mleung2019.github.io/matthew-portfolio/Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="section-font mb-3 link-font"
