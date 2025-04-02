@@ -32,7 +32,7 @@ export const Carousel = (props: {
             key={idx}
           >
             {e.endsWith(".mp4") ? (
-              <video className="d-block w-100" autoPlay loop muted>
+              <video className="d-block w-100" autoPlay loop muted playsInline>
                 <source src={e} type="video/mp4"></source>
               </video>
             ) : (
