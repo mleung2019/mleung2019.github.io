@@ -1,9 +1,16 @@
 import { useCallback, useEffect, useRef } from "react";
 
+// Ensure Safari smooth scrolling is functional
+import { scrollIntoView } from "seamless-scroll-polyfill";
+
 // Constants
 import { HomepageSections, refArrType } from "../views/Homepage";
 
 import "./Sidebar.css";
+
+export const isSafari = /^((?!chrome|android).)*safari/i.test(
+  navigator.userAgent
+);
 
 export const Sidebar = (parentProps: { refArr: refArrType }) => {
   const refArr = parentProps.refArr;
@@ -96,10 +103,17 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
     }`;
 
     const handleSidebarClick = () => {
-      refArr.sections[props.sectionNum].current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      if (!isSafari) {
+        refArr.sections[props.sectionNum].current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      } else {
+        scrollIntoView(refArr.sections[props.sectionNum].current, {
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     };
 
     return (
