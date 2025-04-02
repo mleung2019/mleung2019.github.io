@@ -19,7 +19,7 @@ export const Homepage = () => {
 
   return (
     <div className="home-container">
-      <img className="bg" src="background.png" alt="background" />
+      <img className="bg" src="pcg/pcg_1.png" alt="background" />
 
       <Sidebar refArr={refArr} />
 
