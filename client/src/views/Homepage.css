@@ -20,12 +20,11 @@
 }
 
 .page-container {
-  width: 55%;
+  width: 52.5%;
   height: 100vh;
-  margin-left: 45%;
-  padding-left: 2.5%;
-  padding-right: 11.25%;
-  padding-top: 5vh;
+  margin-left: 47.5%;
+  padding-right: 15%;
+  padding-top: 20px;
 }
 
 .p-font {
@@ -60,4 +59,16 @@
 
 .spacer {
   padding-bottom: 55vh;
+}
+
+@media screen and (max-width: 1000px) {
+  .home-container {
+    display: contents;
+  }
+  .page-container {
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0px;
+  }
 }

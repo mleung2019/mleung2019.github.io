@@ -13,7 +13,11 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
   // Helper function used to remove/add active class
   const toggleOptions = useCallback(
     (newIdx: number) => {
-      if (newIdx < refArr.options.length) {
+      if (
+        newIdx < refArr.options.length &&
+        currentSectionNum.current != -1 &&
+        newIdx != -1
+      ) {
         refArr.options[currentSectionNum.current].current.classList.remove(
           "active-section"
         );
@@ -112,7 +116,7 @@ export const Sidebar = (parentProps: { refArr: refArrType }) => {
   // The sidebar itself
   return (
     <div className="sidebar-container">
-      <p className="mb-4 title-font shadow-lg">Matthew Leung</p>
+      <p className="mb-4 title-font">Matthew Leung</p>
       {HomepageSections.map(({ label }, idx) => (
         <SidebarOption sectionNum={idx} sectionLabel={label} key={idx} />
       ))}

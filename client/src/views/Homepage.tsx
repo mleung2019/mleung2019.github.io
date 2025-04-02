@@ -89,9 +89,9 @@ export const Projects = () => {
         carId="pcg"
         srcMedia={[
           "pcg/pcg_1.png",
+          "pcg/pcg_4.mp4",
           "pcg/pcg_2.png",
           "pcg/pcg_3.png",
-          "pcg/pcg_4.mp4",
         ]}
         isLight={true}
       />

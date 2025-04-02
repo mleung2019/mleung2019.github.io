@@ -1,15 +1,14 @@
 .sidebar-container {
   position: fixed;
-  width: 45%;
+  width: fit-content;
   height: 100vh;
-  padding-left: 11.25%;
-  padding-right: 11.25%;
-  padding-top: 10vh;
+  padding-left: 15%;
+  padding-top: 60px;
   text-align: end;
 }
 
 .sidebar-option {
-  height: 6vh;
+  height: 60px;
   align-content: center;
   cursor: pointer;
   opacity: 0.75;
@@ -17,13 +16,9 @@
 }
 
 .title-font {
-  font-size: 250%;
+  font-size: min(2.65vw, 250%);
   font-weight: bold;
   text-decoration: underline;
-}
-
-.option-font {
-  font-size: 250%;
 }
 
 .sidebar-option:not(.active-section):hover {
@@ -42,9 +37,8 @@
   justify-content: end;
   gap: 20px;
   position: absolute;
-  bottom: 10vh;
-  transform: translateX(-50%);
-  width: 100%;
+  bottom: 60px;
+  right: 0;
 }
 
 .social-icon {
@@ -57,4 +51,35 @@
 
 .social-icon:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar-option {
+    display: none;
+  }
+  .sidebar-container {
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    position: relative;
+  }
+  .socials-container {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    right: auto;
+    bottom: auto;
+  }
+  .title-font {
+    font-size: 250%;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .socials-container {
+    position: relative;
+    padding-top: 135px;
+  }
 }
