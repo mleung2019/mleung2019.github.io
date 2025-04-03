@@ -17,13 +17,13 @@ export const Homepage = () => {
     sections: [useRef(null), useRef(null), useRef(null)],
   };
 
+  const srcBg =
+    "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/" +
+    "v1743643918/pcg_1_npw53y.png";
+
   return (
     <div className="home-container">
-      <img
-        className="bg"
-        src="https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643918/pcg_1_npw53y.png"
-        alt="background"
-      />
+      <img className="bg" src={srcBg} alt="background" />
 
       <Sidebar refArr={refArr} />
 
@@ -98,10 +98,10 @@ export const Projects = () => {
       <Carousel
         carId="pcg"
         srcMedia={[
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643918/pcg_1_npw53y.png",
-          "https://res.cloudinary.com/dih87mi2g/video/upload/f_auto,q_auto/v1743643922/pcg_4_rh0rfy.mp4",
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643917/pcg_2_g4se52.png",
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643917/pcg_3_pfccyn.png",
+          "v1743643918/pcg_1_npw53y.png",
+          "v1743643922/pcg_4_rh0rfy.mp4",
+          "v1743643917/pcg_2_g4se52.png",
+          "v1743643917/pcg_3_pfccyn.png",
         ]}
         isLight={true}
       />
@@ -132,11 +132,11 @@ export const Projects = () => {
       <Carousel
         carId="twp"
         srcMedia={[
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643960/twp_2_fsztkg.png",
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643960/twp_1_qxmjdy.png",
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643961/twp_3_fqru3x.png",
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643961/twp_4_wbbuea.png",
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643962/twp_5_auvvhz.png",
+          "v1743643960/twp_2_fsztkg.png",
+          "v1743643960/twp_1_qxmjdy.png",
+          "v1743643961/twp_3_fqru3x.png",
+          "v1743643961/twp_4_wbbuea.png",
+          "v1743643962/twp_5_auvvhz.png",
         ]}
         isLight={false}
       />
@@ -166,8 +166,8 @@ export const Projects = () => {
       <Carousel
         carId="wl"
         srcMedia={[
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643975/wl_2_hfm9oa.png",
-          "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/v1743643975/wl_1_z4icpf.png",
+          "v1743643975/wl_2_hfm9oa.png",
+          "v1743643975/wl_1_z4icpf.png",
         ]}
         isLight={true}
       />

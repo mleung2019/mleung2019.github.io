@@ -26,20 +26,38 @@ export const Carousel = (props: {
         ))}
       </div>
       <div className="carousel-inner">
-        {props.srcMedia.map((e, idx) => (
-          <div
-            className={idx === 0 ? "carousel-item active" : "carousel-item"}
-            key={idx}
-          >
-            {e.endsWith(".mp4") ? (
-              <video className="d-block w-100" autoPlay loop muted playsInline>
-                <source src={e} type="video/mp4"></source>
-              </video>
-            ) : (
-              <img src={e} className="d-block w-100" alt={String(idx)} />
-            )}
-          </div>
-        ))}
+        {props.srcMedia.map((e, idx) => {
+          const isVideo = e.endsWith(".mp4");
+          const srcString = isVideo
+            ? "https://res.cloudinary.com/dih87mi2g/video/upload/f_auto,q_auto/" +
+              e
+            : "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/" +
+              e;
+          return (
+            <div
+              className={idx === 0 ? "carousel-item active" : "carousel-item"}
+              key={idx}
+            >
+              {isVideo ? (
+                <video
+                  className="d-block w-100"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src={srcString} type="video/mp4"></source>
+                </video>
+              ) : (
+                <img
+                  src={srcString}
+                  className="d-block w-100"
+                  alt={String(idx)}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
       <button
         className="carousel-control-prev"
