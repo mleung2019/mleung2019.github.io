@@ -39,7 +39,12 @@ export const Homepage = () => {
                   rel="noopener noreferrer"
                   className="section-font mb-3 link-font"
                 >
-                  Resume ⤴
+                  Resume
+                  <img
+                    src="icons/link_icon.png"
+                    className="link-icon"
+                    alt="link"
+                  />
                 </a>
               </div>
             ) : (
@@ -81,7 +86,8 @@ export const Projects = () => {
           rel="noopener noreferrer"
           className="subsection-font link-font"
         >
-          Procedural City Generator ⤴
+          Procedural City Generator
+          <img src="icons/link_icon.png" className="link-icon" alt="link" />
         </a>
       </div>
       <div className="ssubsection-font">Godot, C#, GLSL</div>
@@ -112,7 +118,8 @@ export const Projects = () => {
           rel="noopener noreferrer"
           className="subsection-font link-font"
         >
-          Triton Workout Planner ⤴
+          Triton Workout Planner
+          <img src="icons/link_icon.png" className="link-icon" alt="link" />
         </a>
       </div>
       <div className="ssubsection-font">
@@ -145,7 +152,8 @@ export const Projects = () => {
           rel="noopener noreferrer"
           className="subsection-font link-font"
         >
-          WatchList ⤴
+          WatchList
+          <img src="icons/link_icon.png" className="link-icon" alt="link" />
         </a>
       </div>
       <div className="ssubsection-font">
