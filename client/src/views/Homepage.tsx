@@ -67,7 +67,7 @@ export const AboutMe = () => {
   return (
     <div>
       I'm a third-year computer engineering student at UC San Diego who's been
-      been enamored with computers ever since my childhood. At age 11, I spent
+      enamored with computers ever since my childhood. At age 11, I spent
       hundreds of hours on Microsoft PowerPoint - as it became my creative
       sandbox for making games, animations, and comics. It was there that I
       cultivated a love for computers and their power to bring any project I
