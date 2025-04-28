@@ -98,8 +98,8 @@ export const Projects = () => {
       <Carousel
         carId="pcg"
         srcMedia={[
-          "v1743643918/pcg_1_npw53y.png",
           "v1743643922/pcg_4_rh0rfy.mp4",
+          "v1743643918/pcg_1_npw53y.png",
           "v1743643917/pcg_2_g4se52.png",
           "v1743643917/pcg_3_pfccyn.png",
         ]}
