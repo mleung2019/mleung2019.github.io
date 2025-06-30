@@ -67,15 +67,11 @@ export const AboutMe = () => {
   return (
     <div>
       I'm a third-year computer engineering student at UC San Diego who's been
-      enamored with computers ever since my childhood. At age 11, I spent
-      hundreds of hours on Microsoft PowerPoint - as it became my creative
-      sandbox for making games, animations, and comics. It was there that I
-      cultivated a love for computers and their power to bring any project I
-      envisioned to life. Today, this childhood passion has shaped me into who I
-      am today. I'm always looking for new challenges and ways to expand my
-      skill set, both in software and hardware. There's just so much that I love
-      learning about - everything from full-stack development to operating
-      systems to digital and analog circuits.
+      enamored with computers ever since my childhood. I'm always looking for
+      new challenges and ways to expand my skill set, both in software and
+      hardware. There's just so much that I love learning about - everything
+      from full-stack development to operating systems to digital and analog
+      circuits.
     </div>
   );
 };
