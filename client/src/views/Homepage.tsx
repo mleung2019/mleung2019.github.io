@@ -66,12 +66,11 @@ export const Homepage = () => {
 export const AboutMe = () => {
   return (
     <div>
-      I'm a third-year computer engineering student at UC San Diego who's been
+      I'm a fourth-year computer engineering student at UC San Diego who's been
       enamored with computers ever since my childhood. I'm always looking for
       new challenges and ways to expand my skill set, both in software and
       hardware. There's just so much that I love learning about - everything
-      from full-stack development to operating systems to digital and analog
-      circuits.
+      from full-stack development to operating systems to embedded systems.
     </div>
   );
 };
@@ -80,6 +79,35 @@ export const Projects = () => {
   return (
     <div>
       <div>
+        <a
+          href="https://devpost.com/software/lava-lidar-game"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="subsection-font link-font"
+        >
+          Lava LIDAR Game
+          <img src="icons/link_icon.png" className="link-icon" alt="link" />
+        </a>
+      </div>
+      <div className="ssubsection-font">Arduino, Python, C++</div>
+      <Carousel
+        carId="llg"
+        srcMedia={[
+          "v1759113036/llg_1_atacm2.mp4",
+          "t_web_car/llg_2_xh2y71.jpg",
+          "t_web_car/llg_3_sjrjqv.jpg",
+        ]}
+        isLight={true}
+      />
+      <div className="pt-3">
+        Lava LIDAR Game is an interactive, motion-based game that puts an
+        interesting twist on cardio exercise. Dodge unique obstacle patterns and
+        survive for as long as you can. The game tracks a player's movement in
+        real time by using an Arduino Uno and a LIDAR sensor. Awarded 1st place
+        at UCSD's IEEE Quarterly Projects Showcase (Spring 2025).
+      </div>
+
+      <div className="mt-5 pt-5">
         <a
           href="https://github.com/mleung2019/Procedural-City-Game"
           target="_blank"
