@@ -29,9 +29,10 @@ export const Carousel = (props: {
         {props.srcMedia.map((e, idx) => {
           const isVideo = e.endsWith(".mp4");
           const isYt = e.endsWith(".yt");
+          const videoId = e.replace(".yt", "")
           const srcString = 
             isVideo ? "https://res.cloudinary.com/dih87mi2g/video/upload/f_auto,q_auto/" + e
-            : isYt ? `https://www.youtube.com/embed/${e.replace(".yt", "")}?autoplay=1&loop=1&mute=1&controls=0&rel=0`
+            : isYt ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=${videoId}`
             : "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/" + e;
           return (
             <div
