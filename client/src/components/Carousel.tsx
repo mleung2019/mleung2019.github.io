@@ -28,11 +28,11 @@ export const Carousel = (props: {
       <div className="carousel-inner">
         {props.srcMedia.map((e, idx) => {
           const isVideo = e.endsWith(".mp4");
-          const srcString = isVideo
-            ? "https://res.cloudinary.com/dih87mi2g/video/upload/f_auto,q_auto/" +
-              e
-            : "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/" +
-              e;
+          const isYt = e.endsWith(".yt");
+          const srcString = 
+            isVideo ? "https://res.cloudinary.com/dih87mi2g/video/upload/f_auto,q_auto/" + e
+            : isYt ? `https://www.youtube.com/embed/${e.replace(".yt", "")}?autoplay=1&mute=1&controls=0&rel=0`
+            : "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/" + e;
           return (
             <div
               className={idx === 0 ? "carousel-item active" : "carousel-item"}
@@ -46,13 +46,26 @@ export const Carousel = (props: {
                   muted
                   playsInline
                 >
-                  <source src={srcString} type="video/mp4"></source>
+                  <source 
+                    src={srcString}
+                    type="video/mp4"
+                  />
                 </video>
+              ) : isYt ? (
+                <div className="yt-wrapper">
+                  <iframe
+                      className="d-block w-100"
+                      src={srcString}
+                      title="YouTube wrapper"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                </div>
               ) : (
                 <img
                   src={srcString}
                   className="d-block w-100"
-                  alt={String(idx)}
+                  alt={`Carousel item ${idx}`}
                 />
               )}
             </div>

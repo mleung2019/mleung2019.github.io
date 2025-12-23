@@ -67,7 +67,7 @@ export const AboutMe = () => {
   return (
     <div>
       I'm a fourth-year computer engineering student at UC San Diego who's been
-      enamored with computers ever since my childhood. I'm always looking for
+      obsessed with solving problems using computers ever since my childhood. I'm always looking for
       new challenges and ways to expand my skill set, both in software and
       hardware. There's just so much that I love learning about - everything
       from full-stack development to operating systems to embedded systems.
@@ -79,6 +79,37 @@ export const Projects = () => {
   return (
     <div>
       <div>
+        <a
+          href="https://github.com/mleung2019/led-matrix-panel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="subsection-font link-font"
+        >
+          RealTime Display
+          <img src="icons/link_icon.png" className="link-icon" alt="link" />
+        </a>
+      </div>
+      <div className="ssubsection-font">ESP-32, C++, FreeRTOS, Python, Flask, Onshape</div>
+      <Carousel
+        carId="rtd"
+        srcMedia={[
+          "slprgDgejug.yt",
+          "v1759113036/rtd_2_zcu12g.mp4",
+          "t_web_car/rtd_1_uienkf.png"
+        ]}
+        isLight={true}
+      />
+      <div className="pt-3">
+        RealTime Display is a dynamic, live information monitor designed to keep
+        essential data visible at a glance. More than just a simple clock, it lets you 
+        seamlessly switch between widgets to track weather, music
+        playback, and live sports — all in real-time. With its modular design,
+        you can easily customize your panel by creating and adding your 
+        own widgets.
+
+      </div>
+
+      <div className="mt-5 pt-5">
         <a
           href="https://devpost.com/software/lava-lidar-game"
           target="_blank"
@@ -130,11 +161,11 @@ export const Projects = () => {
         isLight={true}
       />
       <div className="pt-3">
-        Procedural City Generator enables users to generate procedurally
-        infinite cities by harnessing the power of Voronoi noise and fragment
-        shaders. Different seeds produce unique, expansive city layouts. The
-        look and feel of a city can be tweaked easily with dynamic, flexible
-        city generation variables. With a 24-hour day/night cycle, city
+        Procedural City Generator is a unique tool that enables users to generate 
+        procedurally infinite cities by harnessing the power of Voronoi noise 
+        and fragment shaders. Different seeds produce unique, expansive city 
+        layouts. The look and feel of a city can be tweaked easily with dynamic, 
+        flexible city generation variables. With a 24-hour day/night cycle, city
         skyscrapers shine in the sun during the day and glow with florescent
         lights at night.
       </div>
@@ -173,7 +204,7 @@ export const Projects = () => {
         workout streak!
       </div>
 
-      <div className="mt-5 pt-5">
+      {/* <div className="mt-5 pt-5">
         <a
           href="https://github.com/watchlisthq/watchlist"
           target="_blank"
@@ -201,7 +232,7 @@ export const Projects = () => {
         services across 50+ countries, it's easy to find just what you're
         looking for. Receive personalized recommendations based on your list to
         discover new favorites effortlessly.
-      </div>
+      </div> */}
     </div>
   );
 };
