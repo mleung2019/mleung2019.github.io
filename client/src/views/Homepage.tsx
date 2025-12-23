@@ -103,7 +103,7 @@ export const Projects = () => {
         RealTime Display is a dynamic, live information monitor designed to keep
         essential data visible at a glance. More than just a simple clock, it lets you 
         seamlessly switch between widgets to track weather, music
-        playback, and live sports — all in real-time. With its modular design,
+        playback, and live sports — all in real time. With its modular design,
         you can easily customize your panel by creating and adding your 
         own widgets.
 
