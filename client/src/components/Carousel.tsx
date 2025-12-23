@@ -31,7 +31,7 @@ export const Carousel = (props: {
           const isYt = e.endsWith(".yt");
           const srcString = 
             isVideo ? "https://res.cloudinary.com/dih87mi2g/video/upload/f_auto,q_auto/" + e
-            : isYt ? `https://www.youtube.com/embed/${e.replace(".yt", "")}?autoplay=1&mute=1&controls=0&rel=0`
+            : isYt ? `https://www.youtube.com/embed/${e.replace(".yt", "")}?autoplay=1&loop=1&mute=1&controls=0&rel=0`
             : "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/" + e;
           return (
             <div
