@@ -19,7 +19,7 @@ export const Homepage = () => {
 
   const srcBg =
     "https://res.cloudinary.com/dih87mi2g/image/upload/f_auto,q_auto/" +
-    "v1743643918/pcg_1_npw53y.png";
+    "v1790383407/starbg_krexli.png";
 
   return (
     <div className="home-container">
@@ -66,7 +66,7 @@ export const Homepage = () => {
 export const AboutMe = () => {
   return (
     <div>
-      I'm a fourth-year computer engineering student at UC San Diego who's been
+      I'm a computer engineering graduate student at UC San Diego who's been
       obsessed with solving problems using computers ever since my childhood. I'm always looking for
       new challenges and ways to expand my skill set, both in software and
       hardware. There's just so much that I love learning about - everything
@@ -106,7 +106,36 @@ export const Projects = () => {
         playback, and live sports — all in real time. With its modular design,
         you can easily customize your panel by creating and adding your 
         own widgets.
+      </div>
 
+      <div className="mt-5 pt-5">
+        <a
+          href="https://github.com/junkyard-computing/OTA-Updates"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="subsection-font link-font"
+        >
+          Junkyard Computing — OTA Updates
+          <img src="icons/link_icon.png" className="link-icon" alt="link" />
+        </a>
+      </div>
+      <div className="ssubsection-font">Linux, Bash, dracut, btrfs</div>
+      <Carousel
+        carId="rtd"
+        srcMedia={[
+          "",
+          "",
+          ""
+        ]}
+        isLight={true}
+      />
+      <div className="pt-3">
+        RealTime Display is a dynamic, live information monitor designed to keep
+        essential data visible at a glance. More than just a simple clock, it lets you 
+        seamlessly switch between widgets to track weather, music
+        playback, and live sports — all in real time. With its modular design,
+        you can easily customize your panel by creating and adding your 
+        own widgets.
       </div>
 
       <div className="mt-5 pt-5">
@@ -203,36 +232,6 @@ export const Projects = () => {
         your Google Calendar. Keep exercising every week to maintain your
         workout streak!
       </div>
-
-      {/* <div className="mt-5 pt-5">
-        <a
-          href="https://github.com/watchlisthq/watchlist"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="subsection-font link-font"
-        >
-          WatchList
-          <img src="icons/link_icon.png" className="link-icon" alt="link" />
-        </a>
-      </div>
-      <div className="ssubsection-font">
-        React, Node.js, JavaScript, HTML/CSS
-      </div>
-      <Carousel
-        carId="wl"
-        srcMedia={[
-          "v1743643975/wl_2_hfm9oa.png",
-          "v1743643975/wl_1_z4icpf.png",
-        ]}
-        isLight={true}
-      />
-      <div className="pt-3">
-        WatchList is a webapp that allows film enthusiasts to curate a list of
-        shows and movies they plan to watch. Supporting 25 different streaming
-        services across 50+ countries, it's easy to find just what you're
-        looking for. Receive personalized recommendations based on your list to
-        discover new favorites effortlessly.
-      </div> */}
     </div>
   );
 };

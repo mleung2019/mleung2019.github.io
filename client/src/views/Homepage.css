@@ -11,12 +11,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
   z-index: -1;
-  opacity: 0.125;
-  filter: blur(0px);
-  mix-blend-mode: lighten;
+  opacity: 0.325;
+  filter: blur(5px);
+  mix-blend-mode: overlay;
 }
 
 .page-container {
