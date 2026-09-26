@@ -125,7 +125,8 @@ export const Projects = () => {
         carId="ota"
         srcMedia={[
           "v1790385188/ota_2_w4t1eu.png",
-          "v1790385187/ota_1_cz1yzs.png"
+          "v1790385187/ota_1_cz1yzs.png",
+          "v1790392204/ota_3_pk62ns.png"
         ]}
         isLight={true}
       />
@@ -133,9 +134,9 @@ export const Projects = () => {
         Junkyard Computing is a Google-sponsored research project that gives 
         discarded smartphones a second life by repurposing them into scalable 
         computing clusters. As part of the OTA Updates team, I helped develop 
-        a reliable operating system update system for repurposed Google 
-        Pixel Fold devices. Our solution enables update detection through an A/B root filesystem with 
-        rollback capabilities.
+        a reliable OS update system for repurposed Google Pixel Fold devices. 
+        Our solution implements an A/B root filesystem for robust storage usage 
+        and a custom dracut module for automatic rollback.
       </div>
 
       <div className="mt-5 pt-5">
@@ -222,7 +223,7 @@ export const Projects = () => {
           "v1743643961/twp_4_wbbuea.png",
           "v1743643962/twp_5_auvvhz.png",
         ]}
-        isLight={false}
+        isLight={true}
       />
       <div className="pt-3">
         Triton Workout Planner is a workout planner app designed to help college
