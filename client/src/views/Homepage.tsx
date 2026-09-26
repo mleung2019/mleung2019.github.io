@@ -146,7 +146,7 @@ export const Projects = () => {
           rel="noopener noreferrer"
           className="subsection-font link-font"
         >
-          Lava LIDAR Game
+          Lava LiDAR Game
           <img src="icons/link_icon.png" className="link-icon" alt="link" />
         </a>
       </div>
@@ -154,17 +154,17 @@ export const Projects = () => {
       <Carousel
         carId="llg"
         srcMedia={[
-          "v1759113036/llg_1_atacm2.mp4",
+          "oB2KBAITWq0.yt",
           "t_web_car/llg_2_xh2y71.jpg",
           "t_web_car/llg_3_sjrjqv.jpg",
         ]}
         isLight={true}
       />
       <div className="pt-3">
-        Lava LIDAR Game is an interactive, motion-based game that puts an
+        Lava LiDAR Game is an interactive, motion-based game that puts an
         interesting twist on cardio exercise. Dodge unique obstacle patterns and
         survive for as long as you can. The game tracks a player's movement in
-        real time by using an Arduino Uno and a LIDAR sensor. Awarded 1st place
+        real time by using an Arduino Uno and a LiDAR sensor. Awarded 1st place
         at UCSD's IEEE Quarterly Projects Showcase (Spring 2025).
       </div>
 
