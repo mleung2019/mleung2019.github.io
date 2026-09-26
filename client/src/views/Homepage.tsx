@@ -126,7 +126,7 @@ export const Projects = () => {
         srcMedia={[
           "v1790385188/ota_2_w4t1eu.png",
           "v1790385187/ota_1_cz1yzs.png",
-          "v1790392204/ota_3_pk62ns.png"
+          "v1790395673/ota_3_wgujsn.png"
         ]}
         isLight={true}
       />
