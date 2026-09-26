@@ -66,11 +66,12 @@ export const Homepage = () => {
 export const AboutMe = () => {
   return (
     <div>
-      I'm a computer engineering graduate student at UC San Diego who's been
-      obsessed with solving problems using computers ever since my childhood. I'm always looking for
-      new challenges and ways to expand my skill set, both in software and
-      hardware. There's just so much that I love learning about - everything
-      from full-stack development to operating systems to embedded systems.
+      I'm a computer engineering graduate student at UC San Diego with a 
+      lifelong passion for solving problems through technology. I love 
+      exploring the intersection of software and hardware, taking on new 
+      challenges, and expanding my skill set. I'm especially interested in 
+      embedded systems, FPGA design, and computer architecture, where I can 
+      work at the intersection of hardware and low-level software.
     </div>
   );
 };
@@ -121,21 +122,20 @@ export const Projects = () => {
       </div>
       <div className="ssubsection-font">Linux, Bash, dracut, btrfs</div>
       <Carousel
-        carId="rtd"
+        carId="ota"
         srcMedia={[
-          "",
-          "",
-          ""
+          "v1790385188/ota_2_w4t1eu.png",
+          "v1790385187/ota_1_cz1yzs.png"
         ]}
         isLight={true}
       />
       <div className="pt-3">
-        RealTime Display is a dynamic, live information monitor designed to keep
-        essential data visible at a glance. More than just a simple clock, it lets you 
-        seamlessly switch between widgets to track weather, music
-        playback, and live sports — all in real time. With its modular design,
-        you can easily customize your panel by creating and adding your 
-        own widgets.
+        Junkyard Computing is a Google-sponsored research project that gives 
+        discarded smartphones a second life by repurposing them into scalable 
+        computing clusters. As part of the OTA Updates team, I helped develop 
+        a reliable operating system update system for repurposed Google 
+        Pixel Fold devices. Our solution enables update detection through an A/B root filesystem with 
+        rollback capabilities.
       </div>
 
       <div className="mt-5 pt-5">
